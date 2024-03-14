@@ -1,0 +1,30 @@
+total_combinations = 6*6
+print(f"Total combinations = {total_combinations}")
+#creating empty 6*6 matrix
+combinations = [[0 for _ in range(6)]for _ in range(6)]
+outcomes = [[0 for _ in range(6)]for _ in range(6)]
+# instalizing values 
+for i in range(6):
+    for j in range(6):
+        x= [i+1,j+1]
+        outcomes[i][j] = (i+1)+(j+1)
+        combinations[i][j]= x
+        
+print("\nTotal possible set of combinations :")
+for row in combinations:
+    print(row)
+print("\nTotal possible outcomes :")
+for row in outcomes:
+    print(row)
+#converting nested list into single list
+values = [val for row in outcomes for val in row]
+
+probability = {}
+for value in range(2,13):
+    occurences = values.count(value)
+    prob = occurences/total_combinations
+    probability[value] = prob
+    
+print("\nProbability of possible Sums :")    
+for value,prob in probability.items():
+    print(f'p(Sum = {value}) = {prob}')
