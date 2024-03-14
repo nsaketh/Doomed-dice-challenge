@@ -1,5 +1,6 @@
 total_combinations = 6*6
 print(f"Total combinations = {total_combinations}")
+
 #creating empty 6*6 matrix
 combinations = [[0 for _ in range(6)]for _ in range(6)]
 outcomes = [[0 for _ in range(6)]for _ in range(6)]
