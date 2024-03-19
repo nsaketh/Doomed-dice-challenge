@@ -28,4 +28,4 @@ def backtrack(curA, curB):
             backtrack(curA + 1, curB + 1)
 
 if __name__ == "__main__":
-    backtrack(4, 2)
+    backtrack(2, 2)
